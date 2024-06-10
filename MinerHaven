@@ -11,14 +11,14 @@ library.options.toggledisplay = 'Fill' --//Applies to all toggles, [Fill] OFF = 
 local mainW = library:CreateWindow("Miner's Haven") --//Name of window
 local Section = mainW:Section('Farm',true)
 
---//AntiAFK Credits to: https://v3rmillion.net/showthread.php?tid=772135
+--//AntiAFK 
 local vu = game:GetService("VirtualUser")
 game:GetService("Players").LocalPlayer.Idled:connect(function()
    vu:Button2Down(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
    task.wait(1)
    vu:Button2Up(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
 end)
---//AntiAFK Credits to: https://v3rmillion.net/showthread.php?tid=772135
+--//AntiAFK
 
 --//Enables Rebirth Farming
 local reFarm = mainW:Toggle('Rebirth Farm',{flag = "rebfarm"},function()
