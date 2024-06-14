@@ -7,7 +7,7 @@ local value = game:GetService("Players").LocalPlayer.Rebirths
 
 local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/TheAbsolutionism/Wally-GUI-Library-V2-Remastered/main/Library%20Code", true))() --//Wally UI Lib V2 Remastered by: https://forum.robloxscripts.com/showthread.php?tid=3180
 library.options.underlinecolor = 'rainbow' --//makes the underline of each "window" rainbow
-library.options.toggledisplay = 'Fill' --//Applies to all toggles, [Fill] OFF = RED, ON = GREEN [CHECK] OFF = BLANK,ON = CHECKMARK
+library.options.toggledisplay = 'CHECK' --//Applies to all toggles, [Fill] OFF = RED, ON = GREEN [CHECK] OFF = BLANK,ON = CHECKMARK
 local mainW = library:CreateWindow("Miner's Haven") --//Name of window
 local Section = mainW:Section('Farm',true)
 
@@ -40,7 +40,7 @@ end)
 
 --//Input time between layouts
 local timeBox = mainW:Box('Time Between Lays',{
-        default = 0;
+        default = 5;
         type = 'number';
         min = 0;
         max = 60; --//You can change this to math.huge if u want. (Currently set to 60 Seconds / 1 Minute)
@@ -52,7 +52,7 @@ end)
 
 --//Select First Layout
 mainW:Dropdown("First Layout", {
-    default = 'First Layout';
+    default = 'Layout2';
     location = getgenv();
     flag = "layoutone";
     list = {
@@ -66,7 +66,7 @@ end)
 
 --//Select Second Layout
 mainW:Dropdown("Second Layout", {
-    default = 'Second Layout';
+    default = 'Layout1';
     location = getgenv();
     flag = "layoutwo";
     list = {
