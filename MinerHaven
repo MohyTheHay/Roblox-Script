@@ -40,7 +40,7 @@ end)
 
 --//Input time between layouts
 local timeBox = mainW:Box('Time Between Lays',{
-        default = 5;
+        default = 0;
         type = 'number';
         min = 0;
         max = 60; --//You can change this to math.huge if u want. (Currently set to 60 Seconds / 1 Minute)
@@ -52,7 +52,7 @@ end)
 
 --//Select First Layout
 mainW:Dropdown("First Layout", {
-    default = 'Layout2';
+    default = 'First Layout';
     location = getgenv();
     flag = "layoutone";
     list = {
@@ -66,7 +66,7 @@ end)
 
 --//Select Second Layout
 mainW:Dropdown("Second Layout", {
-    default = 'Layout1';
+    default = 'Second Layout';
     location = getgenv();
     flag = "layoutwo";
     list = {
